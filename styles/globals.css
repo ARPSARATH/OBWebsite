@@ -5,3 +5,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Dynamic Text Carousel Styles */
+.dynamic-text-container {
+  display: inline;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  vertical-align: baseline;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
