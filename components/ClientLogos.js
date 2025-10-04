@@ -8,13 +8,7 @@ export function ClientLogos() {
     },
     {
       name: 'Hyundai',
-      logo: `<svg viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg" class="w-36 h-14">
-        <g transform="translate(110, 35)">
-          <ellipse cx="0" cy="0" rx="32" ry="24" fill="none" stroke="currentColor" stroke-width="4.5" transform="rotate(-20)"/>
-          <path d="M-18,-8 Q-12,0 -18,8 M18,-8 Q12,0 18,8" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-        </g>
-        <text x="110" y="58" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="2" fill="currentColor">HYUNDAI</text>
-      </svg>`
+      logo: `<img src="https://website2o-development.zohostratus.com/Hyundai_Motor_Company_logo.svg" alt="Hyundai" class="w-36 h-14 object-contain" />`
     },
     {
       name: 'Raptee.HV',
