@@ -8,6 +8,47 @@ document.getElementById('app').innerHTML = `
   ${ClientLogos()}
 `;
 
+// Mobile Menu Toggle
+function initMobileMenu() {
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  let isMenuOpen = false;
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        // Open menu
+        mobileMenu.style.transform = 'translateY(0)';
+        mobileMenu.style.opacity = '1';
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        // Close menu
+        mobileMenu.style.transform = 'translateY(-100%)';
+        mobileMenu.style.opacity = '0';
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Close menu when clicking on a menu item
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        isMenuOpen = false;
+        mobileMenu.style.transform = 'translateY(-100%)';
+        mobileMenu.style.opacity = '0';
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+  }
+}
+
 // Dynamic Text Carousel - Initialize after content is rendered
 function initDynamicTextCarousel() {
   const dynamicText = document.getElementById('dynamicText');
@@ -40,5 +81,8 @@ function initDynamicTextCarousel() {
   }
 }
 
-// Initialize the carousel after a short delay to ensure DOM is ready
-setTimeout(initDynamicTextCarousel, 100);
+// Initialize everything after a short delay to ensure DOM is ready
+setTimeout(() => {
+  initMobileMenu();
+  initDynamicTextCarousel();
+}, 100);

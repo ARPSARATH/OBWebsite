@@ -30,18 +30,18 @@ export function ClientLogos() {
   const duplicatedClients = [...clients, ...clients, ...clients];
 
   return `
-    <section class="w-full py-4 bg-white overflow-hidden relative z-30" style="margin-top: -40px;">
-      <div class="max-w-4xl mx-auto px-4">
+    <section class="w-full py-4 md:py-6 bg-white overflow-hidden relative z-30" style="margin-top: -20px; md:margin-top: -40px;">
+      <div class="max-w-4xl mx-auto px-2 md:px-4">
         <!-- Section Header -->
-        <div class="text-center mb-3">
-          <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Trusted By</h3>
+        <div class="text-center mb-2 md:mb-3">
+          <h3 class="text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-wide">Trusted By</h3>
         </div>
 
         <!-- Marquee Container -->
         <div class="relative">
           <!-- Fade overlays -->
-          <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute left-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
           <!-- Scrolling logos -->
           <div class="marquee-container">

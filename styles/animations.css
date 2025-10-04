@@ -164,11 +164,35 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .marquee-item {
-    padding: 1rem 1rem;
-    min-width: 140px;
+    padding: 0.5rem 0.75rem;
+    min-width: 120px;
+  }
+  
+  .logo-wrapper img {
+    width: 100px !important;
+    height: 40px !important;
   }
   
   .logo-wrapper svg {
     width: 100px !important;
+  }
+  
+  /* Adjust animations for better mobile performance */
+  .animated-gradient {
+    animation-duration: 8s;
+  }
+  
+  .marquee-content {
+    animation-duration: 25s;
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .animated-gradient,
+    .marquee-content,
+    .fade-slide-in,
+    .animate-grid {
+      animation: none;
+    }
   }
 }
