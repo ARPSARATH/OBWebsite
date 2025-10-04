@@ -13,7 +13,7 @@ function initDynamicTextCarousel() {
   const dynamicText = document.getElementById('dynamicText');
   if (dynamicText) {
     const phrases = ['Handled Effortlessly', 'On Time', 'At Scale'];
-    let currentIndex = 0;
+    let currentIndex = 1; // Start at index 1 since first phrase is already displayed
     
     function updateText() {
       dynamicText.style.opacity = '0';
@@ -35,7 +35,7 @@ function initDynamicTextCarousel() {
     dynamicText.style.fontSize = 'inherit';
     dynamicText.style.fontWeight = 'inherit';
     
-    // Start the carousel
+    // Start the carousel after initial delay
     setInterval(updateText, 2000); // Change every 2 seconds
   }
 }

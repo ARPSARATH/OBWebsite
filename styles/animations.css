@@ -143,6 +143,24 @@
   transform: scale(1.05);
 }
 
+/* Boost opacity for specific logos */
+.logo-boost-opacity {
+  opacity: 0.8 !important;
+}
+
+.logo-wrapper:hover .logo-boost-opacity {
+  opacity: 1 !important;
+}
+
+/* Scale adjustments for specific logos */
+.logo-scale-up {
+  transform: scale(1.2);
+}
+
+.logo-scale-down {
+  transform: scale(0.8);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .marquee-item {

@@ -2,9 +2,7 @@ export function ClientLogos() {
   const clients = [
     {
       name: 'Samsung',
-      logo: `<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" class="w-36 h-14">
-        <text x="120" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700" letter-spacing="-1" fill="currentColor">SAMSUNG</text>
-      </svg>`
+      logo: `<img src="https://website2o-development.zohostratus.com/Samsung_Engineering_logo.svg" alt="Samsung" class="w-36 h-14 object-contain logo-scale-up" />`
     },
     {
       name: 'Hyundai',
@@ -12,20 +10,19 @@ export function ClientLogos() {
     },
     {
       name: 'Raptee.HV',
-      logo: `<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" class="w-36 h-14">
-        <g transform="translate(15, 30)">
-          <path d="M0,-15 L15,-15 L10,-2 L22,-18 L7,-18 L12,-2 Z" fill="currentColor"/>
-          <circle cx="7" cy="8" r="3" fill="currentColor"/>
-        </g>
-        <text x="135" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.5" fill="currentColor">Raptee.HV</text>
-      </svg>`
+      logo: `<img src="https://website2o-development.zohostratus.com/rapteenew.svg" alt="Raptee.HV" class="w-36 h-14 object-contain" />`
     },
     {
-      name: 'Panasonic',
-      logo: `<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" class="w-36 h-14">
-        <text x="120" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" letter-spacing="1" fill="currentColor">Panasonic</text>
-        <line x1="30" y1="45" x2="210" y2="45" stroke="currentColor" stroke-width="1.5"/>
-      </svg>`
+      name: 'Daemyoung Engineering',
+      logo: `<img src="https://website2o-development.zohostratus.com/ci-black.png" alt="Daemyoung Engineering" class="w-36 h-14 object-contain logo-boost-opacity logo-scale-down" />`
+    },
+    {
+      name: 'Jundo',
+      logo: `<img src="https://website2o-development.zohostratus.com/jundo.png" alt="Jundo" class="w-36 h-14 object-contain logo-boost-opacity logo-scale-down" />`
+    },
+    {
+      name: 'Tricolite',
+      logo: `<img src="https://website2o-development.zohostratus.com/tricolite.png" alt="Tricolite" class="w-36 h-14 object-contain" />`
     }
   ];
 
