@@ -37,7 +37,7 @@ export function HeroSection() {
       </div>
 
       <!-- Hero Content -->
-      <div class="max-w-3xl mx-auto text-center relative z-10 flex flex-col justify-center h-full px-2 md:px-4 pt-24 md:pt-40">
+      <div class="max-w-3xl mx-auto text-center relative z-10 flex flex-col justify-center h-full px-2 md:px-4 pt-16 md:pt-28">
         <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-extrabold tracking-tight font-inter text-transparent bg-clip-text animated-gradient">
           OfficeBuddy
         </h1>
