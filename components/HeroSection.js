@@ -29,10 +29,10 @@ export function HeroSection() {
         <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight font-inter text-transparent bg-clip-text animated-gradient">
           OfficeBuddy
         </h1>
-        <h2 class="mt-4 text-xl md:text-3xl font-semibold text-gray-800 font-inter">
-          Put’s your office on <span class="text-[#3c7cfc]">Autopilot</span>
+        <h2 class="mt-8 text-xl md:text-3xl font-semibold text-gray-800 font-inter">
+          Put's your office on <span class="text-[#3c7cfc]">Autopilot</span>
         </h2>
-        <p class="mt-4 text-gray-700 font-inter">From stationery to servers — everything your workspace needs, <span class="text-[#3c7cfc] dynamic-text-container" id="dynamicText">Handled Effortlessly</span>.</p>
+        <p class="mt-2 text-gray-700 font-inter">From stationery to servers everything your workspace needs <span class="text-[#3c7cfc] dynamic-text-container" id="dynamicText">Handled Effortlessly</span>.</p>
 
         <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-4">
           <a
