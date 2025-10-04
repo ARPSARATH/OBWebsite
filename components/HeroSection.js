@@ -1,11 +1,23 @@
 import { getVersion } from '../scripts/version.js';
+import { Badge } from './Badge.js';
 
 export function HeroSection() {
   return `
-    <section class="w-full px-4 pt-28 pb-12 min-h-screen relative overflow-hidden bg-white fade-slide-in">
+    <section class="w-full px-4 pt-20 pb-4 relative overflow-hidden bg-white fade-slide-in" style="height: calc(100vh - 180px);">
       <!-- Top-right version tag -->
       <div class="absolute top-4 right-4 text-[8px] text-gray-400 font-medium font-mono z-20">
         v${getVersion()}
+      </div>
+
+      <!-- Badge between navbar and content -->
+      <div class="absolute top-20 left-1/2 transform -translate-x-1/2 z-20">
+        ${Badge({ 
+          text: 'New Gen Workspace Solutions', 
+          icon: 'sparkles',
+          bgColor: 'bg-purple-100',
+          textColor: 'text-purple-700',
+          iconColor: 'text-purple-600'
+        })}
       </div>
 
       <!-- Background Grid (only upper half) -->
@@ -25,16 +37,16 @@ export function HeroSection() {
       </div>
 
       <!-- Hero Content -->
-      <div class="max-w-3xl mx-auto text-center relative z-10 flex flex-col justify-center h-full mt-16">
+      <div class="max-w-3xl mx-auto text-center relative z-10 flex flex-col justify-center h-full">
         <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight font-inter text-transparent bg-clip-text animated-gradient">
           OfficeBuddy
         </h1>
-        <h2 class="mt-8 text-xl md:text-3xl font-semibold text-gray-800 font-inter">
+        <h2 class="mt-6 text-xl md:text-3xl font-semibold text-gray-800 font-inter">
           Put's your office on <span class="text-[#3c7cfc]">Autopilot</span>
         </h2>
         <p class="mt-2 text-gray-700 font-inter">From stationery to servers everything your workspace needs <span class="text-[#3c7cfc] dynamic-text-container" id="dynamicText">Handled Effortlessly</span>.</p>
 
-        <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-4">
+        <div class="mt-6 flex flex-col md:flex-row items-center justify-center gap-4">
           <a
             href="#"
             class="bg-[#3c7cfc] text-white text-[15px] px-6 py-2 rounded-lg shadow-sm transition-all duration-300 ease-out hover:shadow-lg hover:bg-blue-700 font-semibold"

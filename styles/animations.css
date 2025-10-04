@@ -101,3 +101,56 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* Client Logos Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 0;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.5rem;
+  min-width: 180px;
+}
+
+.logo-wrapper {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  color: #4b5563;
+}
+
+.logo-wrapper:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .marquee-item {
+    padding: 1rem 1rem;
+    min-width: 140px;
+  }
+  
+  .logo-wrapper svg {
+    width: 100px !important;
+  }
+}

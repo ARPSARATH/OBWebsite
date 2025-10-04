@@ -1,9 +1,11 @@
 import { Navbar } from '../components/Navbar.js';
 import { HeroSection } from '../components/HeroSection.js';
+import { ClientLogos } from '../components/ClientLogos.js';
 
 document.getElementById('app').innerHTML = `
   ${Navbar()}
   ${HeroSection()}
+  ${ClientLogos()}
 `;
 
 // Dynamic Text Carousel - Initialize after content is rendered
