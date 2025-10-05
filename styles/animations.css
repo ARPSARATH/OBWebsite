@@ -172,3 +172,99 @@
     width: 100px !important;
   }
 }
+
+/* Products Page Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll-triggered fade-in animation */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delays for category sections */
+.category-section:nth-child(1) { transition-delay: 0s; }
+.category-section:nth-child(2) { transition-delay: 0.1s; }
+.category-section:nth-child(3) { transition-delay: 0.2s; }
+.category-section:nth-child(4) { transition-delay: 0.3s; }
+.category-section:nth-child(5) { transition-delay: 0.4s; }
+
+/* Visual container enhancements - Modern Apple-style */
+.visual-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.visual-item {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visual-default {
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateX(-4px) translateY(-2px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced floating animation for visual elements - Smoother */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.visual-item .animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Glassmorphism effect for visual container */
+.visual-container > div {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Smooth glow pulse animation */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.1);
+  }
+}
+
+.visual-default > div > div:first-child,
+.visual-item > div > div:first-child {
+  animation: glowPulse 3s ease-in-out infinite;
+}
