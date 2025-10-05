@@ -1,8 +1,10 @@
 import { Navbar } from '../components/Navbar.js';
+import { HomePage } from '../components/HomePage.js';
 import { HeroSection } from '../components/HeroSection.js';
 import { ClientLogos } from '../components/ClientLogos.js';
 import { ProductsPage } from '../components/ProductsPage.js';
 import { ServicesPage } from '../components/ServicesPage.js';
+import { ContactPage } from '../components/ContactPage.js';
 import { Router } from './router.js';
 
 // Initialize router
@@ -13,17 +15,15 @@ router.addRoute('/', renderHomePage);
 router.addRoute('/products', renderProductsPage);
 router.addRoute('/services', renderServicesPage);
 router.addRoute('/service', renderServicesPage); // Redirect old route
-router.addRoute('/rentals', renderComingSoon);
-router.addRoute('/contact', renderComingSoon);
+router.addRoute('/contact', renderContactPage);
 
 // Route handlers
 function renderHomePage() {
   document.getElementById('app').innerHTML = `
     ${Navbar('/')}
-    ${HeroSection()}
-    ${ClientLogos()}
+    ${HomePage()}
   `;
-  initDynamicTextCarousel();
+  // HomePage has its own initialization
 }
 
 function renderProductsPage() {
@@ -42,22 +42,12 @@ function renderServicesPage() {
   // Services page has its own initialization
 }
 
-function renderComingSoon() {
-  const path = router.currentRoute;
-  const pageName = path.substring(1).charAt(0).toUpperCase() + path.substring(2);
-  
+function renderContactPage() {
   document.getElementById('app').innerHTML = `
-    ${Navbar(path)}
-    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
-      <div class="text-center space-y-6 p-8">
-        <h1 class="text-5xl font-bold text-gray-900">Coming Soon</h1>
-        <p class="text-xl text-gray-600">The ${pageName} page is under construction.</p>
-        <a href="/" data-route class="inline-block px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
-          Back to Home
-        </a>
-      </div>
-    </div>
+    ${Navbar('/contact')}
+    ${ContactPage()}
   `;
+  // Contact page has its own initialization
 }
 
 // Dynamic Text Carousel - Initialize after content is rendered

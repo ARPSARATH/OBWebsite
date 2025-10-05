@@ -30,25 +30,25 @@ export function ClientLogos() {
   const duplicatedClients = [...clients, ...clients, ...clients];
 
   return `
-    <section class="w-full py-4 bg-white overflow-hidden relative z-30" style="margin-top: -40px;">
-      <div class="max-w-4xl mx-auto px-4">
-        <!-- Section Header -->
+    <section class="w-full py-4 bg-transparent overflow-hidden relative z-30">
+      <div class="max-w-5xl mx-auto px-4">
+        <!-- Trusted By Header -->
         <div class="text-center mb-3">
-          <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Trusted By</h3>
+          <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Trusted By</p>
         </div>
-
+        
         <!-- Marquee Container -->
         <div class="relative">
           <!-- Fade overlays -->
           <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
           <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-          <!-- Scrolling logos -->
+          <!-- Scrolling logos - Keep in color -->
           <div class="marquee-container">
             <div class="marquee-content">
               ${duplicatedClients.map(client => `
                 <div class="marquee-item">
-                  <div class="logo-wrapper">
+                  <div class="logo-wrapper-color">
                     ${client.logo}
                   </div>
                 </div>

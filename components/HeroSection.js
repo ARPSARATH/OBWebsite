@@ -3,7 +3,7 @@ import { Badge } from './Badge.js';
 
 export function HeroSection() {
   return `
-    <section class="w-full px-4 pt-20 pb-4 relative overflow-hidden bg-white fade-slide-in" style="height: calc(100vh - 180px);">
+    <section class="w-full px-4 pt-20 pb-8 relative overflow-hidden bg-white fade-slide-in" style="height: calc(100vh - 200px);">
       <!-- Top-right version tag -->
       <div class="absolute top-4 right-4 text-[8px] text-gray-400 font-medium font-mono z-20">
         v${getVersion()}

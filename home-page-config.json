@@ -1,0 +1,508 @@
+{
+  "page": "Home",
+  "version": "1.0.0",
+  "theme": "light",
+  "style": {
+    "font": "Inter",
+    "accentColor": "#8b5cf6",
+    "secondaryColor": "#3b82f6",
+    "background": "#ffffff",
+    "animations": "premium-micro",
+    "layout": "modular, whitespace-rich, responsive, framer-like",
+    "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+  },
+  "hero": {
+    "id": "hero-magnetic",
+    "headline": "From stationery to servers — everything your workspace needs",
+    "subheadline": {
+      "static": "handled",
+      "rotating": ["Effortlessly", "On Time", "At Scale"],
+      "rotationInterval": 3000
+    },
+    "description": "We start as your trusted vendor and grow with you into a friendly partner.",
+    "badge": {
+      "text": "✨ New Gen Workspace Solutions",
+      "style": "glassmorphism"
+    },
+    "cta": [
+      {
+        "text": "Explore Products",
+        "variant": "primary",
+        "link": "#products",
+        "style": "magnetic"
+      },
+      {
+        "text": "Talk to a Buddy",
+        "variant": "outline",
+        "link": "tel:+919884989466",
+        "style": "magnetic-outline"
+      }
+    ],
+    "motion": {
+      "backgroundGradientMesh": true,
+      "floatingBlobs": true,
+      "scrollIndicator": true,
+      "ctaMagnetic": true,
+      "textGradientShift": true,
+      "underlineReveal": true
+    }
+  },
+  "sections": [
+    {
+      "id": "about",
+      "type": "split-screen",
+      "title": "The New Gen of Workspace Solutions",
+      "subtitle": "About Office Buddy",
+      "copy": "We start your journey as a trusted vendor and grow with you into a friendly partner. From startups to enterprises, we simplify your workspace with smart solutions for products, rentals, pantry, and events.",
+      "tags": ["Products", "Rentals", "Pantry", "IT Setup", "Events"],
+      "visual": {
+        "type": "floating-elements",
+        "elements": [
+          { "icon": "📝", "size": "large", "animation": "float-smooth-6s" },
+          { "icon": "💻", "size": "xlarge", "animation": "float-smooth-5s-delayed" },
+          { "icon": "☕", "size": "medium", "animation": "float-smooth-7s-delayed" },
+          { "icon": "🎉", "size": "large", "animation": "float-smooth-6s-delayed" },
+          { "icon": "🏢", "size": "xxlarge", "animation": "float-smooth-8s-center" }
+        ],
+        "background": "gradient-purple-to-blue",
+        "interaction": "hover-scale-pause"
+      },
+      "motion": {
+        "reveal": "fade-slide-in",
+        "staggerDelay": 200
+      }
+    },
+    {
+      "id": "metrics",
+      "type": "bento-grid",
+      "title": "What Makes Us Different",
+      "subtitle": "Numbers that speak for themselves",
+      "cards": [
+        {
+          "metric": "10K+",
+          "label": "Products",
+          "icon": "📦",
+          "gradient": "from-purple-600 to-purple-700",
+          "animation": "count-up-fade-in"
+        },
+        {
+          "metric": "40+",
+          "label": "Services",
+          "icon": "⚡",
+          "gradient": "from-blue-600 to-blue-700",
+          "animation": "count-up-fade-in"
+        },
+        {
+          "metric": "150+",
+          "label": "Brands",
+          "icon": "🏆",
+          "gradient": "from-indigo-600 to-indigo-700",
+          "animation": "count-up-fade-in"
+        },
+        {
+          "metric": "6+",
+          "label": "Years of Expertise",
+          "icon": "🎯",
+          "gradient": "from-pink-600 to-pink-700",
+          "animation": "count-up-fade-in"
+        },
+        {
+          "metric": "80+",
+          "label": "Smiles / Month",
+          "icon": "😊",
+          "gradient": "from-orange-600 to-orange-700",
+          "animation": "pulse-on-hover"
+        }
+      ],
+      "motion": {
+        "reveal": "staggered-fade-scale",
+        "staggerDelay": 100,
+        "hover": "lift-shadow-enhance",
+        "counter": {
+          "duration": 2000,
+          "steps": 60,
+          "trigger": "on-scroll-into-view"
+        }
+      }
+    },
+    {
+      "id": "locations",
+      "type": "interactive-map",
+      "title": "Serving Offices Across Tamil Nadu",
+      "subtitle": "Expanding to Bangalore Soon",
+      "map": {
+        "type": "svg_custom",
+        "region": "Tamil Nadu",
+        "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Tamil_Nadu_outline_map.svg",
+        "customization": {
+          "fill": "gradient-purple-blue-10",
+          "stroke": "#8b5cf6",
+          "strokeWidth": 3
+        },
+        "markers": [
+          {
+            "city": "Chennai",
+            "position": { "cx": 200, "cy": 100 },
+            "color": "#8b5cf6",
+            "size": 8,
+            "towns": [
+              "Ambattur",
+              "Avadi",
+              "Guindy",
+              "Nungambakkam",
+              "Kilpauk",
+              "Porur",
+              "Velachery",
+              "T.Nagar"
+            ],
+            "animation": "pulse-fade"
+          },
+          {
+            "city": "Kanchipuram",
+            "position": { "cx": 210, "cy": 130 },
+            "color": "#3b82f6",
+            "size": 7,
+            "towns": [
+              "Irrugatukottai",
+              "Kanchipuram",
+              "Maraimalai Nagar",
+              "Oragadam",
+              "Sriperumbudur"
+            ],
+            "animation": "pulse-fade"
+          },
+          {
+            "city": "Thiruvallur",
+            "position": { "cx": 170, "cy": 110 },
+            "color": "#6366f1",
+            "size": 7,
+            "towns": [
+              "Kadambathur",
+              "Mannur",
+              "Poonamalee",
+              "Thiruvallur",
+              "Thirumozhisai"
+            ],
+            "animation": "pulse-fade"
+          },
+          {
+            "city": "Coimbatore",
+            "position": { "cx": 90, "cy": 280 },
+            "color": "#ec4899",
+            "size": 8,
+            "towns": [
+              "Eachanari",
+              "Kalapatti",
+              "Kuruchi",
+              "Mopperipalayam",
+              "Saravanampatti"
+            ],
+            "animation": "pulse-fade"
+          }
+        ],
+        "interaction": {
+          "type": "bi-directional-hover",
+          "cardToMap": "scale-marker",
+          "mapToCard": "lift-card"
+        },
+        "motion": "slight-zoom-on-scroll"
+      }
+    },
+    {
+      "id": "products_services",
+      "type": "horizontal-scroll-gallery",
+      "title": "From Desk to Data — Everything You Need",
+      "copy": "With 10K+ products and 40+ services, we simplify office procurement, rentals, IT, pantry, and workspace setup. Explore solutions that adapt to any team size.",
+      "categories": [
+        {
+          "title": "Stationery",
+          "icon": "📝",
+          "description": "From pens to papers",
+          "gradient": "from-purple-600 to-purple-700",
+          "link": "/products#stationery"
+        },
+        {
+          "title": "Electronics",
+          "icon": "⚡",
+          "description": "Complete IT solutions",
+          "gradient": "from-blue-600 to-blue-700",
+          "link": "/products#electronics"
+        },
+        {
+          "title": "Pantry",
+          "icon": "🥤",
+          "description": "Smart vending & snacks",
+          "gradient": "from-green-600 to-green-700",
+          "link": "/products#pantry"
+        },
+        {
+          "title": "IT Rentals",
+          "icon": "💻",
+          "description": "Flexible equipment plans",
+          "gradient": "from-indigo-600 to-indigo-700",
+          "link": "/services#rentals"
+        },
+        {
+          "title": "Workspace Setup",
+          "icon": "🏢",
+          "description": "Complete office design",
+          "gradient": "from-pink-600 to-pink-700",
+          "link": "/services#workspace-setup"
+        },
+        {
+          "title": "Events",
+          "icon": "🎉",
+          "description": "Managed celebrations",
+          "gradient": "from-orange-600 to-orange-700",
+          "link": "/services#events"
+        }
+      ],
+      "motion": {
+        "scrollDirection": "horizontal",
+        "wheelToScroll": true,
+        "cardHover": "lift-scale",
+        "iconHover": "scale-independent"
+      }
+    },
+    {
+      "id": "client_logos",
+      "type": "marquee-carousel",
+      "title": "Trusted by Offices Across Sectors",
+      "logos": [
+        {
+          "name": "Samsung",
+          "src": "samsung-logo",
+          "category": "Electronics"
+        },
+        {
+          "name": "Hyundai",
+          "src": "hyundai-logo",
+          "category": "Automotive"
+        },
+        {
+          "name": "Panasonic",
+          "src": "panasonic-logo",
+          "category": "Electronics"
+        },
+        {
+          "name": "Raptee.HV",
+          "src": "raptee-logo",
+          "category": "EV Startup"
+        }
+      ],
+      "motion": {
+        "type": "infinite-scroll",
+        "speed": 30000,
+        "direction": "left",
+        "hover": "color-scale"
+      }
+    },
+    {
+      "id": "testimonials",
+      "type": "auto-carousel",
+      "title": "What Our Clients Say",
+      "cards": [
+        {
+          "avatar": "👨‍💼",
+          "name": "Rajesh Kumar",
+          "company": "Samsung India",
+          "text": "Office Buddy transformed our procurement process. Single point of contact for everything we need!",
+          "rating": 5
+        },
+        {
+          "avatar": "👩‍💼",
+          "name": "Priya Sharma",
+          "company": "Hyundai Motors",
+          "text": "Their smart pantry solution keeps our team energized. Highly recommend their services.",
+          "rating": 5
+        },
+        {
+          "avatar": "👨‍💻",
+          "name": "Arun Patel",
+          "company": "Panasonic",
+          "text": "Exceptional service and quality. They understand enterprise needs like no one else.",
+          "rating": 5
+        },
+        {
+          "avatar": "👩‍💻",
+          "name": "Meera Reddy",
+          "company": "Raptee.HV",
+          "text": "From stationery to IT setup, they handle everything efficiently. True workspace partner!",
+          "rating": 5
+        }
+      ],
+      "motion": {
+        "autoRotate": true,
+        "rotationInterval": 5000,
+        "transition": "slide-ease",
+        "navigation": "dots",
+        "pauseOnHover": false,
+        "pauseOnInteraction": true
+      }
+    },
+    {
+      "id": "event_meetings",
+      "type": "split-showcase",
+      "orientation": "left-visual",
+      "title": "Meet. Present. Celebrate.",
+      "copy": "From small team meetings to curated roundtable dinners, Office Buddy handles complete logistics, guest coordination, and real-time tracking via Zoho Backstage.",
+      "cta": {
+        "text": "Plan Your Event",
+        "link": "/services#events",
+        "style": "gradient-pink-purple"
+      },
+      "visual": {
+        "type": "animated-illustration",
+        "primaryIcon": "🎉",
+        "size": "9xl",
+        "decorations": [
+          { "icon": "🎊", "animation": "float-random" },
+          { "icon": "🎈", "animation": "float-random" },
+          { "icon": "✨", "animation": "float-random" }
+        ],
+        "background": "gradient-pink-to-purple",
+        "motion": "continuous-float"
+      }
+    },
+    {
+      "id": "workspace_setup",
+      "type": "split-showcase",
+      "orientation": "right-visual",
+      "title": "Workspace Setup — New or Expanding",
+      "copy": "Setting up a new office or scaling existing space? We manage furniture, equipment, pantry, IT, and operations — all delivered, installed, and supported by one trusted partner.",
+      "cta": {
+        "text": "Start Your Setup",
+        "link": "/services#workspace-setup",
+        "style": "gradient-indigo-blue"
+      },
+      "visual": {
+        "type": "office-layout-visualization",
+        "elements": [
+          { "icon": "🪑", "position": "top-left", "animation": "float-smooth" },
+          { "icon": "💻", "position": "top-right", "animation": "float-smooth" },
+          { "icon": "☕", "position": "bottom-left", "animation": "float-smooth" },
+          { "icon": "🖨️", "position": "bottom-right", "animation": "float-smooth" },
+          { "icon": "🏢", "position": "center", "size": "large", "animation": "float-smooth" }
+        ],
+        "background": "gradient-indigo-to-blue",
+        "interaction": "hover-pause"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "full-width-banner",
+      "title": "Your Workspace. Fully Simplified.",
+      "copy": "Office Buddy provides everything from supplies to rentals, pantry solutions, IT, and events. Onboard with us and experience seamless office management.",
+      "background": {
+        "type": "gradient",
+        "colors": "from-purple-600 via-blue-600 to-purple-600",
+        "animation": "continuous-shift",
+        "overlay": "dot-pattern-animated"
+      },
+      "cta_buttons": [
+        {
+          "text": "Get Started",
+          "variant": "white-on-gradient",
+          "link": "#contact",
+          "style": "magnetic"
+        },
+        {
+          "text": "Talk to a Buddy",
+          "variant": "outline-white",
+          "link": "tel:+919884989466",
+          "style": "magnetic-outline"
+        }
+      ]
+    },
+    {
+      "id": "footer_quality",
+      "type": "centered-badge",
+      "copy": "We never compromise on quality — it's not just a rule, it's our motto.",
+      "visual": {
+        "type": "badge",
+        "icon": "✓",
+        "iconStyle": "gradient-circle",
+        "background": "gradient-purple-to-blue-light"
+      },
+      "motion": {
+        "reveal": "fade-in-bounce"
+      }
+    }
+  ],
+  "footer": {
+    "style": "dark-premium",
+    "columns": [
+      {
+        "title": "Brand",
+        "type": "brand",
+        "logo": "https://i.ibb.co/KxXjchyb/Chat-GPT-Image-Apr-20-2025-08-53-58-AM.png",
+        "description": "Your trusted partner for complete workspace solutions across Tamil Nadu.",
+        "socials": ["facebook", "twitter", "linkedin"]
+      },
+      {
+        "title": "Products",
+        "type": "links",
+        "links": [
+          { "text": "Stationery", "href": "/products#stationery" },
+          { "text": "Electronics", "href": "/products#electronics" },
+          { "text": "Housekeeping", "href": "/products#housekeeping" },
+          { "text": "Snacks & Beverages", "href": "/products#snacks" },
+          { "text": "Corporate Gifts", "href": "/products#gifts" }
+        ]
+      },
+      {
+        "title": "Services",
+        "type": "links",
+        "links": [
+          { "text": "Workspace Rentals", "href": "/services#rentals" },
+          { "text": "Smart Pantry", "href": "/services#pantry" },
+          { "text": "Events & Meetings", "href": "/services#events" },
+          { "text": "Workspace Setup", "href": "/services#workspace-setup" },
+          { "text": "IT Solutions", "href": "/services#it-solutions" }
+        ]
+      },
+      {
+        "title": "Get in Touch",
+        "type": "contact",
+        "items": [
+          { "type": "phone", "value": "+91 98849 89466", "link": "tel:+919884989466" },
+          { "type": "email", "value": "hello@officebuddy.in", "link": "mailto:hello@officebuddy.in" },
+          { "type": "location", "value": "Chennai, Tamil Nadu" }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright": "© 2025 OfficeBuddy. All rights reserved.",
+      "links": [
+        { "text": "Privacy Policy", "href": "/privacy" },
+        { "text": "Terms of Service", "href": "/terms" },
+        { "text": "Cookie Policy", "href": "/cookies" }
+      ]
+    },
+    "motion": {
+      "linkHover": "underline-reveal"
+    }
+  },
+  "performance": {
+    "lazyLoad": true,
+    "hardwareAcceleration": true,
+    "willChange": ["transform", "opacity"],
+    "debounceScroll": true,
+    "intersectionObserver": {
+      "threshold": 0.1,
+      "rootMargin": "-100px"
+    }
+  },
+  "accessibility": {
+    "colorContrast": "WCAG-AA",
+    "keyboardNavigation": true,
+    "screenReaderOptimized": true,
+    "focusIndicators": true
+  },
+  "analytics": {
+    "trackScrollDepth": true,
+    "trackInteractions": true,
+    "trackCTAClicks": true
+  }
+}
+

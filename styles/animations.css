@@ -571,3 +571,1059 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ====== HOME PAGE PREMIUM ANIMATIONS ====== */
+
+/* Gradient mesh animation */
+.gradient-mesh {
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    rgba(59, 130, 246, 0.1) 25%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(139, 92, 246, 0.1) 75%, 
+    rgba(59, 130, 246, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: gradientMesh 15s ease infinite;
+}
+
+@keyframes gradientMesh {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Magnetic button effects */
+.magnetic-btn,
+.magnetic-btn-outline {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.magnetic-btn span:first-child {
+  position: relative;
+  z-index: 10;
+}
+
+.magnetic-btn span:last-child {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Reveal on scroll - premium timing */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero underline animation */
+.hero-underline {
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Rotating text animation */
+.rotating-text-container {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  height: 1.2em;
+  vertical-align: bottom;
+}
+
+.rotating-text-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.rotating-text-item:first-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Metric cards animation */
+.metric-card {
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metric-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Location cards hover effect */
+.location-card {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Horizontal scroll container */
+.horizontal-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.horizontal-scroll-content {
+  display: flex;
+  width: max-content;
+}
+
+/* Horizontal card hover effect */
+.horizontal-card {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.horizontal-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Floating card smooth animation */
+.floating-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-card:hover {
+  animation-play-state: paused;
+}
+
+/* Testimonial carousel */
+.testimonial-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-card {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.testimonial-dot {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.testimonial-dot:hover {
+  transform: scale(1.2);
+}
+
+/* Map interactions */
+.map-marker {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.map-marker:hover {
+  transform: scale(1.2);
+}
+
+.map-region {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scroll indicator animation */
+.scroll-indicator {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
+/* Counter animation base */
+.counter-number {
+  transition: all 0.3s ease;
+}
+
+/* Smooth float for home page elements */
+@keyframes float-smooth {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+/* Hero badge animation */
+.hero-badge {
+  animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Premium pulse for location pins */
+@keyframes pulse-premium {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.5);
+  }
+}
+
+.marker-pulse {
+  animation: pulse-premium 2s ease-in-out infinite;
+}
+
+/* Gradient animation for hero text */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-gradient-text span {
+  background-size: 200% auto;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Bento grid entrance animation */
+.metric-card {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metric-card:nth-child(2) { animation-delay: 0.2s; }
+.metric-card:nth-child(3) { animation-delay: 0.3s; }
+.metric-card:nth-child(4) { animation-delay: 0.4s; }
+.metric-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth card lift on hover */
+.location-card,
+.horizontal-card,
+.metric-card {
+  will-change: transform, box-shadow;
+}
+
+/* CTA section pattern animation */
+@keyframes patternMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 48px 48px;
+  }
+}
+
+/* Enhanced scroll snap for horizontal sections */
+.horizontal-scroll-container {
+  scroll-snap-type: x mandatory;
+}
+
+.horizontal-card {
+  scroll-snap-align: start;
+}
+
+/* Footer link hover effects */
+footer a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+/* Responsive adjustments for home page */
+@media (max-width: 768px) {
+  .rotating-text-container {
+    min-width: 150px;
+  }
+  
+  .horizontal-card {
+    width: 300px;
+  }
+  
+  .testimonial-card {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+/* Magnetic hover effect enhancement */
+.magnetic-btn::before,
+.magnetic-btn-outline::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.magnetic-btn:hover::before {
+  opacity: 0.1;
+  background: radial-gradient(circle at center, currentColor 0%, transparent 70%);
+}
+
+/* Enhanced shadow for cards */
+.metric-card,
+.location-card,
+.horizontal-card,
+.testimonial-card {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metric-card:hover,
+.location-card:hover,
+.horizontal-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ====== NEW METRIC CARDS ====== */
+.metric-card-new {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.metric-card-new:nth-child(1) { animation-delay: 0.1s; }
+.metric-card-new:nth-child(2) { animation-delay: 0.2s; }
+.metric-card-new:nth-child(3) { animation-delay: 0.3s; }
+
+.metric-card-secondary {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.metric-card-secondary:nth-child(1) { animation-delay: 0.5s; }
+.metric-card-secondary:nth-child(2) { animation-delay: 0.6s; }
+
+/* ====== VERTICAL CAROUSEL ====== */
+.vertical-carousel-container {
+  position: relative;
+}
+
+.vertical-carousel-track {
+  max-height: 600px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.vertical-carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.vertical-card {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.vertical-card:nth-child(1) { animation-delay: 0.1s; }
+.vertical-card:nth-child(2) { animation-delay: 0.2s; }
+.vertical-card:nth-child(3) { animation-delay: 0.3s; }
+.vertical-card:nth-child(4) { animation-delay: 0.4s; }
+.vertical-card:nth-child(5) { animation-delay: 0.5s; }
+.vertical-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vertical-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ====== FIXED TESTIMONIAL CAROUSEL ====== */
+.testimonial-carousel-wrapper {
+  position: relative;
+}
+
+.testimonial-carousel {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.testimonial-track-fixed {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.testimonial-dot-fixed {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.testimonial-dot-fixed:hover {
+  transform: scale(1.2);
+}
+
+/* ====== CTA SECTION ENHANCEMENTS ====== */
+.cta-floating-particles {
+  animation: float-smooth 10s ease-in-out infinite;
+}
+
+/* ====== RESPONSIVE ADJUSTMENTS ====== */
+@media (max-width: 768px) {
+  .vertical-carousel-track {
+    max-height: 500px;
+  }
+  
+  .vertical-card {
+    padding: 1.5rem;
+  }
+  
+  .metric-card-new {
+    padding: 2rem;
+  }
+}
+
+/* ====== MODERN METRIC CARDS ====== */
+.metric-card-modern {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.metric-card-modern:nth-child(1) { animation-delay: 0.1s; }
+.metric-card-modern:nth-child(2) { animation-delay: 0.2s; }
+.metric-card-modern:nth-child(3) { animation-delay: 0.3s; }
+.metric-card-modern:nth-child(4) { animation-delay: 0.4s; }
+.metric-card-modern:nth-child(5) { animation-delay: 0.5s; }
+
+.metric-card-modern:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Shimmer effect for metric cards */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+.animate-shimmer-premium {
+  animation: shimmer-sweep 2s ease-in-out;
+}
+
+/* ====== EQUAL METRIC CARDS (Legacy) ====== */
+.metric-card-equal {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metric-card-equal:nth-child(1) { animation-delay: 0.1s; }
+.metric-card-equal:nth-child(2) { animation-delay: 0.2s; }
+.metric-card-equal:nth-child(3) { animation-delay: 0.3s; }
+.metric-card-equal:nth-child(4) { animation-delay: 0.4s; }
+.metric-card-equal:nth-child(5) { animation-delay: 0.5s; }
+
+.metric-card-equal:hover {
+  transform: translateY(-10px);
+}
+
+/* ====== EXPANDABLE SHOWCASE CARDS ====== */
+.expandable-showcase-card {
+  position: relative;
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, flex;
+}
+
+.expandable-showcase-card.expanded {
+  flex: 1 1 100%;
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.expandable-showcase-card.collapsed {
+  opacity: 0.3;
+  transform: scale(0.92);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+#expandable-showcase {
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card elements transitions */
+.expandable-showcase-card .card-icon {
+  will-change: transform, opacity;
+}
+
+.expandable-showcase-card .card-title,
+.expandable-showcase-card .card-short-desc,
+.expandable-showcase-card .card-expanded-desc,
+.expandable-showcase-card .card-pills,
+.expandable-showcase-card .card-pills-extra,
+.expandable-showcase-card .card-cta {
+  will-change: opacity, max-height, color;
+}
+
+/* ====== QUALITY BADGE SCROLL ANIMATION - APPLE GLASS EFFECT ====== */
+.quality-badge-container {
+  pointer-events: none;
+}
+
+.quality-badge {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.25), 
+    rgba(255, 255, 255, 0.15));
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px 0 rgba(139, 92, 246, 0.1),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.quality-badge-icon {
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.6), 
+    rgba(59, 130, 246, 0.5));
+  box-shadow: 
+    0 4px 16px rgba(139, 92, 246, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.quality-badge-text {
+  color: rgba(31, 41, 55, 0.85);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* ====== CTA MICROANIMATIONS ====== */
+
+/* Blob animations */
+@keyframes blob-move-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(100px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-50px, 100px) scale(0.9);
+  }
+}
+
+@keyframes blob-move-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-100px, 50px) scale(1.15);
+  }
+  66% {
+    transform: translate(50px, -100px) scale(0.85);
+  }
+}
+
+/* Particle float animation */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-10px);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translateY(-30px) translateX(-20px);
+    opacity: 0.6;
+  }
+}
+
+/* Pulse glow for badge */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Gradient shift for text */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Bounce slow animation */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+/* ====== CLIENT LOGOS - COLORED VERSION ====== */
+.logo-wrapper-color {
+  filter: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.logo-wrapper-color:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Keep existing special classes */
+.logo-wrapper-color .logo-boost-opacity {
+  opacity: 0.9 !important;
+}
+
+.logo-wrapper-color:hover .logo-boost-opacity {
+  opacity: 1 !important;
+}
+
+/* ====== CTA ELEMENT ANIMATIONS ====== */
+.cta-badge {
+  animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.cta-title {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.cta-description {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.cta-button-primary,
+.cta-button-secondary {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.cta-button-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stat icons hover */
+.cta-stat-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-stat:hover .cta-stat-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.cta-stat-number {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-stat:hover .cta-stat-number {
+  transform: scale(1.1);
+}
+
+/* ====== LOCATION SECTION ANIMATIONS ====== */
+
+/* Modern location cards */
+.location-card-modern {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.location-card-modern:nth-child(1) { animation-delay: 0.1s; }
+.location-card-modern:nth-child(2) { animation-delay: 0.2s; }
+.location-card-modern:nth-child(3) { animation-delay: 0.3s; }
+.location-card-modern:nth-child(4) { animation-delay: 0.4s; }
+
+.location-card-modern:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Location pills animation */
+.location-pill {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* Pulse line animation */
+@keyframes pulse-line {
+  0%, 100% {
+    opacity: 0.2;
+    stroke-width: 2;
+  }
+  50% {
+    opacity: 0.6;
+    stroke-width: 3;
+  }
+}
+
+/* Rotate rays for Bangalore section */
+@keyframes rotate-ray {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Connection network animation */
+.connection-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-line 2s ease-in-out forwards;
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animated gradient for text */
+@keyframes animate-gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% auto;
+  animation: animate-gradient-x 3s ease-in-out infinite;
+}
+
+/* Network node pulse */
+@keyframes network-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.network-node {
+  animation: network-pulse 2s ease-in-out infinite;
+}
+
+/* Spotlight effect for Bangalore card */
+@keyframes spotlight-sweep {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(45deg);
+  }
+}
+
+.spotlight-effect {
+  animation: spotlight-sweep 4s ease-in-out infinite;
+}
+
+/* Progress bar fill animation */
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+/* Floating particles enhanced */
+@keyframes particle-float-enhanced {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translate(10px, -20px) scale(1.2);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-5px, -40px) scale(0.8);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(-15px, -20px) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+/* Status badge pulse */
+.status-badge-pulse {
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  }
+}
+
+/* Card hover lift effect */
+.card-lift {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-12px) rotateX(2deg);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Shimmer enhanced for location cards */
+@keyframes shimmer-location {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+/* Glow pulse for city icons */
+@keyframes icon-glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(139, 92, 246, 0.6));
+  }
+}
+
+/* Scale and rotate for interactive elements */
+.interactive-scale {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.interactive-scale:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Backdrop blur enhancement */
+.backdrop-blur-premium {
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+/* Border gradient animation for special cards */
+@keyframes border-glow {
+  0%, 100% {
+    border-color: rgba(251, 146, 60, 0.3);
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.2);
+  }
+  50% {
+    border-color: rgba(251, 146, 60, 0.6);
+    box-shadow: 0 0 40px rgba(251, 146, 60, 0.4);
+  }
+}
+
+.border-glow-animate {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+/* Progress bar shimmer animation */
+@keyframes shimmer-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer-progress {
+  animation: shimmer-progress 2s ease-in-out infinite;
+}
+
+/* Faster and smoother 3D card transitions */
+.location-card-modern .relative.bg-white\/80 {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+/* Bangalore card 3D effect */
+.location-card-bangalore {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+  animation-delay: 0.4s;
+}
+
+.location-card-bangalore:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.location-card-bangalore .relative.bg-white\/80 {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform-style: preserve-3d;
+}

@@ -3,7 +3,6 @@ export function Navbar(currentPath = '/') {
     { label: 'Home', path: '/' },
     { label: 'Products', path: '/products' },
     { label: 'Services', path: '/services' },
-    { label: 'Rentals', path: '/rentals' },
     { label: 'Contact', path: '/contact' }
   ];
   
