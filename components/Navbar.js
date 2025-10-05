@@ -2,7 +2,7 @@ export function Navbar(currentPath = '/') {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Products', path: '/products' },
-    { label: 'Service', path: '/service' },
+    { label: 'Services', path: '/services' },
     { label: 'Rentals', path: '/rentals' },
     { label: 'Contact', path: '/contact' }
   ];

@@ -2,6 +2,7 @@ import { Navbar } from '../components/Navbar.js';
 import { HeroSection } from '../components/HeroSection.js';
 import { ClientLogos } from '../components/ClientLogos.js';
 import { ProductsPage } from '../components/ProductsPage.js';
+import { ServicesPage } from '../components/ServicesPage.js';
 import { Router } from './router.js';
 
 // Initialize router
@@ -10,7 +11,8 @@ const router = new Router();
 // Define routes
 router.addRoute('/', renderHomePage);
 router.addRoute('/products', renderProductsPage);
-router.addRoute('/service', renderComingSoon);
+router.addRoute('/services', renderServicesPage);
+router.addRoute('/service', renderServicesPage); // Redirect old route
 router.addRoute('/rentals', renderComingSoon);
 router.addRoute('/contact', renderComingSoon);
 
@@ -30,6 +32,14 @@ function renderProductsPage() {
     ${ProductsPage()}
   `;
   initScrollAnimations();
+}
+
+function renderServicesPage() {
+  document.getElementById('app').innerHTML = `
+    ${Navbar('/services')}
+    ${ServicesPage()}
+  `;
+  // Services page has its own initialization
 }
 
 function renderComingSoon() {
