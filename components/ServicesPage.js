@@ -140,14 +140,15 @@ export function ServicesPage() {
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             ${renderServiceCard({
               title: 'Workspace Rentals',
               description: 'Enterprise-grade equipment with flexible rental terms and comprehensive support.',
               gradient: 'from-purple-600 to-purple-800',
               delay: '0s',
               target: '#rentals',
-              ctaText: 'View Equipment'
+              ctaText: 'View Equipment',
+              icon: '🖨️'
             })}
             
             ${renderServiceCard({
@@ -156,7 +157,8 @@ export function ServicesPage() {
               gradient: 'from-blue-600 to-blue-800',
               delay: '0.1s',
               target: '#pantry',
-              ctaText: 'Setup Pantry'
+              ctaText: 'Setup Pantry',
+              icon: '🥤'
             })}
             
             ${renderServiceCard({
@@ -165,7 +167,8 @@ export function ServicesPage() {
               gradient: 'from-pink-600 to-pink-800',
               delay: '0.2s',
               target: '#events',
-              ctaText: 'Plan Event'
+              ctaText: 'Plan Event',
+              icon: '🎉'
             })}
             
             ${renderServiceCard({
@@ -174,7 +177,8 @@ export function ServicesPage() {
               gradient: 'from-indigo-600 to-indigo-800',
               delay: '0.3s',
               target: '#workspace-setup',
-              ctaText: 'Start Setup'
+              ctaText: 'Start Setup',
+              icon: '🏢'
             })}
           </div>
         </div>
@@ -444,44 +448,33 @@ export function ServicesPage() {
             </p>
           </div>
 
-          <div class="grid md:grid-cols-3 gap-8">
-            ${[
-              {
-                step: '01',
-                title: 'Consultation',
-                description: 'We understand your needs, team size, and workspace requirements',
-                gradient: 'from-purple-600 to-blue-600',
-                badge: 'FREE'
-              },
-              {
-                step: '02',
-                title: 'Design & Planning',
-                description: 'Custom workspace plan with furniture, equipment, and technology setup',
-                gradient: 'from-blue-600 to-indigo-600',
-                badge: null
-              },
-              {
-                step: '03',
-                title: 'Delivery & Support',
-                description: 'Complete installation, configuration, and ongoing maintenance',
-                gradient: 'from-indigo-600 to-purple-600',
-                badge: null
-              }
-            ].map((step, idx) => `
-              <div class="scroll-reveal relative group" style="animation-delay: ${idx * 0.1}s;">
-                <div class="absolute -inset-0.5 bg-gradient-to-r ${step.gradient} rounded-3xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500"></div>
-                <div class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 hover:border-transparent transition-all duration-300 h-full flex flex-col">
-                  ${step.badge ? `
-                    <div class="absolute top-4 right-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">
-                      ✓ ${step.badge}
-                    </div>
-                  ` : ''}
-                  <div class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r ${step.gradient} mb-2">STEP ${step.step}</div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-3">${step.title}</h3>
-                  <p class="text-gray-600 leading-relaxed flex-grow">${step.description}</p>
-                </div>
-              </div>
-            `).join('')}
+          <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            ${renderWorkspaceSetupCard({
+              step: '01',
+              title: 'Consultation',
+              description: 'We understand your needs, team size, and workspace requirements',
+              gradient: 'from-purple-600 to-blue-600',
+              delay: '0s',
+              icon: '💬'
+            })}
+            
+            ${renderWorkspaceSetupCard({
+              step: '02',
+              title: 'Design & Planning',
+              description: 'Custom workspace plan with furniture, equipment, and technology setup',
+              gradient: 'from-blue-600 to-indigo-600',
+              delay: '0.1s',
+              icon: '📐'
+            })}
+            
+            ${renderWorkspaceSetupCard({
+              step: '03',
+              title: 'Delivery & Support',
+              description: 'Complete installation, configuration, and ongoing maintenance',
+              gradient: 'from-indigo-600 to-purple-600',
+              delay: '0.2s',
+              icon: '🚚'
+            })}
           </div>
 
           <!-- Full service showcase -->
@@ -628,21 +621,44 @@ export function ServicesPage() {
 }
 
 // Helper function to render service cards
-function renderServiceCard({ title, description, gradient, delay, target, ctaText }) {
+function renderServiceCard({ title, description, gradient, delay, target, ctaText, icon }) {
   return `
-    <a href="${target}" class="service-card scroll-reveal group relative block" style="animation-delay: ${delay};">
-      <div class="absolute -inset-0.5 bg-gradient-to-r ${gradient} rounded-3xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500"></div>
-      <div class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 hover:border-transparent transition-all duration-500 h-full flex flex-col">
-        <h3 class="text-2xl font-bold text-gray-900 mb-3">${title}</h3>
-        <p class="text-gray-600 leading-relaxed flex-grow">${description}</p>
-        <div class="mt-6 inline-flex items-center text-transparent bg-clip-text bg-gradient-to-r ${gradient} font-semibold group-hover:gap-2 transition-all">
-          ${ctaText}
-          <svg class="ml-1 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
+    <div class="relative group">
+      <div class="absolute inset-0 bg-gradient-to-br ${gradient} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+      <div class="relative p-8 border-2 border-gray-100 rounded-3xl hover:border-purple-300 transition-all duration-500">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 text-4xl">${icon}</div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">${title}</h3>
+            <p class="text-gray-600 leading-relaxed line-clamp-2">
+              ${description}
+            </p>
+          </div>
         </div>
       </div>
-    </a>
+    </div>
+  `;
+}
+
+// Helper function to render workspace setup cards with step indicators
+function renderWorkspaceSetupCard({ step, title, description, gradient, delay, icon }) {
+  return `
+    <div class="relative group">
+      <div class="absolute inset-0 bg-gradient-to-br ${gradient} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+      <div class="relative p-6 border-2 border-gray-100 rounded-3xl hover:border-purple-300 transition-all duration-500 h-full">
+        <div class="text-center space-y-4">
+          <div class="relative">
+            <div class="text-4xl mb-3">${icon}</div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">${title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              ${description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   `;
 }
 

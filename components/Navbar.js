@@ -23,7 +23,6 @@ export function Navbar(currentPath = '/') {
           (item) => `
           <a href="${item.path}" data-route class="relative transition-colors hover:text-purple-600 hover:font-semibold ${currentPath === item.path ? 'text-purple-600 font-semibold' : ''}">
             <span class="relative z-10">${item.label}</span>
-            <span class="absolute left-0 bottom-0 h-0.5 w-full ${currentPath === item.path ? 'scale-x-100' : 'scale-x-0'} bg-purple-500 transition-transform duration-300 origin-left hover:scale-x-100 rounded"></span>
           </a>`
         ).join('')}
       </div>
